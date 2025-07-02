@@ -1,7 +1,7 @@
 # Личный проект «Шесть городов»
 
 * Студент: [Кирилл Омаров](https://up.htmlacademy.ru/nodejs-api-individual/2/user/1195561).
-* Наставник: `Неизвестно`.
+* Наставник: `Konstantin Ilyin`.
 
 ---
 
