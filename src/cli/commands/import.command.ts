@@ -1,17 +1,16 @@
-import chalk from 'chalk';
 import { Command } from './command.interface.js';
 import { TsvFileReader } from '../../shared/tsv-file-reader.js';
 import { createOffer, getErrorMessage } from '../../shared/helpers/index.js';
+import { COMMAND_IMPORT, ERROR_CANT_IMPORT } from '../../shared/types/index.js';
 
 export class ImportCommand implements Command {
-  private readonly defaultFileName = './mocks/data.tsv';
-
   public getName(): string {
-    return '--import';
+    return COMMAND_IMPORT;
   }
 
   private onImportedLine(line: string) {
     const offer = createOffer(line);
+
     console.info(offer);
   }
 
@@ -22,7 +21,7 @@ export class ImportCommand implements Command {
   public async execute(...args: string[]): Promise<void> {
     const [filename] = args;
 
-    const fileReader = new TsvFileReader(filename || this.defaultFileName);
+    const fileReader = new TsvFileReader(filename);
 
     fileReader.on('line', this.onImportedLine);
     fileReader.on('end', this.onCompleteImport);
@@ -30,9 +29,9 @@ export class ImportCommand implements Command {
     try {
       await fileReader.read();
     } catch (error) {
-      console.error(chalk.red(`Can't import data from file: ${filename}`));
+      console.error(`${ERROR_CANT_IMPORT} ${filename}`);
 
-      console.error(chalk.red(getErrorMessage(error)));
+      console.error(getErrorMessage(error));
     }
   }
 }
