@@ -1,90 +1,119 @@
 {
     "api": {
-        "categories": [
-            "Книги",
-            "Журналы",
-            "Посуда",
-            "Разное",
-            "Диски"
+        "cities": [
+            "Paris",
+            "Cologne", 
+            "Brussels",
+            "Amsterdam",
+            "Hamburg",
+            "Dusseldorf"
         ],
         "titles": [
-            "Тёмная башня",
-            "Стрелок",
-            "Извлечение троих",
-            "Куджо",
-            "Глаза дракона",
-            "Зелёная миля",
-            "Кристина",
-            "Жребий Салема",
-            "Бегущий человек",
-            "История Лизи",
-            "Долгая прогулка",
-            "Институт",
-            "Худеющий",
-            "Гвенди и её волшебная шкатулка",
-            "Мобильник",
-            "Черновик",
-            "Ночной Дозор",
-            "Крёстный Отец",
-            "Атлант расправил плечи"
+            "Beautiful & luxurious apartment at great location",
+            "Wood and stone place",
+            "Canal View Prinsengracht",
+            "Nice, cozy, warm big bed apartment",
+            "Perfectly located Castro",
+            "The house among olive trees",
+            "Amazing and Extremely Central Flat",
+            "Beautiful apartment in the most romantic area",
+            "Great location! Great price!",
+            "Stylish and comfortable apartament",
+            "Perfect studio at the historical center",
+            "Apartment in the city center",
+            "Cozy, warm and stylish. Perfect for any occasion",
+            "Bright, sunny, quiet apt",
+            "Modern apartment in the city center",
+            "Charming accommodation in the heart of the city",
+            "Beautiful & luxurious apartment at great location",
+            "Wood and stone place",
+            "Canal View Prinsengracht",
+            "Nice, cozy, warm big bed apartment"
         ],
         "descriptions": [
-            "Страшный рассказ о драконе. Колдовство, предательство и необыкновенный мир фэнтези.",
-            "История про вампиров из маленького городка. Коварство, нестандартный сюжет и необыкновенные приключения священника.",
-            "Идти или остановиться? Вопрос без правильного ответа. Рассказ о долгой и смертельной прогулке.",
-            "Как похудеть и не сойти с ума? А как вернуть вес обратно? Необычная история противостояния.",
-            "Прими звонок и превратись в зомби. Рассказ о зомбировании через средства связи.",
-            "Виновен или нет? Какая разница. Исход один. Сверхспособности не помогут.",
-            "И у машин есть душа. Хорошо ли это? Мистический рассказ про автомобиль.",
-            "Криминальная сага от неповторимого Марио Пьюзо. Перестрелки, погони, предательство и дружба.",
-            "Мир населяют не только люди. Иные живут вместе с ними и визуально ничем не отличаются. История про магию и могущественных существ. Борьба сил Добра и Зла."
+            "A quiet cozy and picturesque that hides behind a river by the unique lightness of Amsterdam. The building is green and from 18th century. An independent House, strategically located between Rembrand Square and National Opera, but where the bustle of the city comes to rest in this alley flowery and colorful.",
+            "Peaceful studio in the most wanted area in town. Quiet house Near of everything. Completely renovated. Lovely neighbourhood, lot of trendy shops, restaurants and bars in a walking distance.",
+            "I am happy to welcome you to quite apartment in the center of the city. Three minutes walk to Piazza San Marco, on the third floor, with a beautiful terrace, it will be a unique experience and you will ever regret to have chosen my house.",
+            "Design interior in most sympathetic area! Complitely renovated apartment, located in the middle of historical center of the city.",
+            "Very central apartment located next to the station. The building has been completely renovated and is in perfect condition. Very comfortable apartment with beautiful wooden floors and Catalan style, with equipped kitchen, 2 double bedrooms, large dining room, elegant bathroom, air conditioning. An ideal location for families to feel part of their community.",
+            "A quiet cozy and picturesque that hides behind a river by the unique lightness of Amsterdam. The building is green and from 18th century.",
+            "Peaceful studio in the most wanted area in town. Quiet house Near of everything. Completely renovated.",
+            "I am happy to welcome you to quite apartment in the center of the city. Three minutes walk to Piazza San Marco.",
+            "Design interior in most sympathetic area! Complitely renovated apartment, located in the middle of historical center of the city.",
+            "Very central apartment located next to the station. The building has been completely renovated and is in perfect condition."
         ],
-        "offerImages": [
-            "book.jpg",
-            "institute-book.jpg",
-            "dark-tower.jpg",
-            "shining.jpg",
-            "draft.jpg",
-            "magic.jpg"
+        "previewImages": [
+            "apartment-01.jpg",
+            "apartment-02.jpg",
+            "apartment-03.jpg",
+            "room.jpg",
+            "room-small.jpg",
+            "studio-01.jpg",
+            "studio-photos.jpg",
+            "apartment-small-03.jpg",
+            "apartment-small-04.jpg"
         ],
-        "categoryImages": [
-            "category-book.jpg",
-            "category-disk.jpg",
-            "category-home.jpg",
-            "category-games.jpg",
-            "category-entertainment.jpg",
-            "category-films.jpg"
+        "housingImages": [
+            "apartment-01.jpg",
+            "apartment-02.jpg", 
+            "apartment-03.jpg",
+            "room.jpg",
+            "room-small.jpg",
+            "studio-01.jpg",
+            "studio-photos.jpg",
+            "apartment-small-03.jpg",
+            "apartment-small-04.jpg"
         ],
-        "users": [
-            "Иван Иванов",
-            "Олег Сидоров",
-            "Пьер Безухов",
-            "Роланд Дискейн",
-            "Холи Гибни",
-            "Джек Торренс",
-            "Антон Городецкий",
-            "Борис Гесер",
-            "Рокки Бальбоа",
-            "Джон Смит"
+        "hosts": [
+            "Angelina Connelly",
+            "Max Black",
+            "Oliver Martinez",
+            "Emma Wilson",
+            "Sophia Brown",
+            "Michael Johnson",
+            "Isabella Davis",
+            "William Garcia",
+            "Ava Rodriguez",
+            "James Miller"
         ],
         "emails": [
-            "snow@pisem.local",
-            "president@dka.local",
-            "fish@big.local",
-            "test@pisem.local",
-            "freedom@pisem.local",
-            "rolan@pochta.local",
-            "author@mir.local",
-            "test@lost.loca",
-            "kujo-fan@story.local"
+            "angelina@pisem.local",
+            "max@pisem.local",
+            "oliver@pisem.local",
+            "emma@pisem.local",
+            "sophia@pisem.local",
+            "michael@pisem.local",
+            "isabella@pisem.local",
+            "william@pisem.local",
+            "ava@pisem.local",
+            "james@pisem.local"
         ],
         "avatars": [
-            "user.jpg",
-            "photo.jpg",
-            "awesome-avatar.jpg",
-            "roland.jpg",
-            "smite.jpg",
-            "coffee.jpg"
+            "avatar-angelina.jpg",
+            "avatar-max.jpg",
+            "avatar-oliver.jpg",
+            "avatar-emma.jpg",
+            "avatar-sophia.jpg",
+            "avatar-michael.jpg",
+            "avatar-isabella.jpg",
+            "avatar-william.jpg",
+            "avatar-ava.jpg",
+            "avatar-james.jpg"
+        ],
+        "amenities": [
+            "Breakfast",
+            "Air conditioning",
+            "Laptop friendly workspace",
+            "Baby seat",
+            "Washer",
+            "Towels",
+            "Fridge"
+        ],
+        "housingTypes": [
+            "apartment",
+            "house", 
+            "room",
+            "hotel"
         ]
     }
 }
