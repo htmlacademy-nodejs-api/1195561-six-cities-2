@@ -24,7 +24,6 @@ export class CLIApplication {
   public getCommand(commandName: string): Command {
     const command = this.commands[commandName];
 
-
     return command ?? undefined;
   }
 
