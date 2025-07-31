@@ -1,23 +1,25 @@
 import { Command } from './command.interface.js';
-// import got from "got";
-import axios from 'axios';
-import { MockData } from '../../../mocks/types/index.js';
+import got from 'got';
+import {
+  MockData,
+  DECIMAL_RADIX,
+  COMMAND_GENERATE,
+  ERROR_CANT_GENERATE,
+  ERROR_CANT_LOAD_DATA,
+} from '../../shared/types/index.js';
 import { TSVOfferGenerate } from '../../shared/libs/offer-generator/tsv-offer-generate.js';
 import { TSVFileWriter } from '../../shared/libs/file-written/index.js';
 import { getErrorMessage } from '../../shared/helpers/index.js';
-import chalk from 'chalk';
-
 export class GenerateCommand implements Command {
   private initialData: MockData;
 
   private async load(url: string) {
     try {
-      this.initialData = await axios.get(url).then((res) => res.data);
-      // this.initialData = await got.get(url).json();
+      this.initialData = await got.get(url).json();
 
       console.log(this.initialData);
     } catch {
-      throw new Error(`Can't load data from ${url}`);
+      throw new Error(`${ERROR_CANT_LOAD_DATA} ${url}`);
     }
   }
 
@@ -31,12 +33,12 @@ export class GenerateCommand implements Command {
   }
 
   public getName(): string {
-    return '--generate';
+    return COMMAND_GENERATE;
   }
 
   public async execute(...parameters: string[]): Promise<void> {
     const [count, filepath, url] = parameters;
-    const offerCount = Number.parseInt(count, 10);
+    const offerCount = Number.parseInt(count, DECIMAL_RADIX);
 
     try {
       await this.load(url);
@@ -45,10 +47,10 @@ export class GenerateCommand implements Command {
 
       console.info(`File ${filepath} was created!`);
     } catch (error: unknown) {
-      console.error(chalk.red('Can\'t generate data'));
+      console.error(ERROR_CANT_GENERATE);
 
       if (error instanceof Error) {
-        console.error(chalk.red(getErrorMessage(error)));
+        console.error(getErrorMessage(error));
       }
     }
   }
