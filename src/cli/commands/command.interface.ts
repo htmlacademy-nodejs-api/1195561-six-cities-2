@@ -1,4 +1,6 @@
+import { Container } from 'inversify';
+
 export interface Command {
-    getName(): string;
-    execute(...args: string[]): void;
+  getName(): string;
+  execute(container: Container, ...args: string[]): void;
 }

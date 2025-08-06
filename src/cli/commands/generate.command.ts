@@ -1,3 +1,4 @@
+import { Container } from 'inversify';
 import { Command } from './command.interface.js';
 import got from 'got';
 import {
@@ -36,7 +37,10 @@ export class GenerateCommand implements Command {
     return COMMAND_GENERATE;
   }
 
-  public async execute(...parameters: string[]): Promise<void> {
+  public async execute(
+    _container: Container,
+    ...parameters: string[]
+  ): Promise<void> {
     const [count, filepath, url] = parameters;
     const offerCount = Number.parseInt(count, DECIMAL_RADIX);
 

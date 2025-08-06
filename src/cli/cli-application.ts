@@ -1,6 +1,8 @@
+import { Container } from 'inversify';
 import { Command } from './commands/command.interface.js';
 import { CommandParser } from './command-parser.js';
 import { HelpCommand } from './commands/help.command.js';
+import { createContainer } from '../shared/libs/container/container.config.js';
 
 type CommanCollection = Record<string, Command>;
 
@@ -8,8 +10,11 @@ const helpCommand = new HelpCommand();
 
 export class CLIApplication {
   private commands: CommanCollection = {};
+  private container: Container;
 
-  constructor(private readonly defaultCommand: string = '--help') {}
+  constructor(private readonly defaultCommand: string = '--help') {
+    this.container = createContainer();
+  }
 
   public registrCommands(commandsList: Command[]): void {
     commandsList.forEach((command) => {
@@ -23,7 +28,6 @@ export class CLIApplication {
 
   public getCommand(commandName: string): Command {
     const command = this.commands[commandName];
-
 
     return command ?? undefined;
   }
@@ -42,13 +46,13 @@ export class CLIApplication {
     const command: Command = this.getCommand(commandName);
 
     if (!command) {
-      helpCommand.execute();
+      helpCommand.execute(this.container);
 
       return;
     }
 
     const commandArgs = parsedCommand[commandName];
 
-    command.execute(...commandArgs);
+    command.execute(this.container, ...commandArgs);
   }
 }
