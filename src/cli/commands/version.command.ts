@@ -1,3 +1,4 @@
+import { Container } from 'inversify';
 import { Command } from './command.interface.js';
 import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
@@ -31,7 +32,7 @@ export class VersionCommand implements Command {
     return COMMAND_VERSION;
   }
 
-  public execute(): void {
+  public execute(_container: Container): void {
     try {
       const version = this.readVersion();
       console.info(version);
